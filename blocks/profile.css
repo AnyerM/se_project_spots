@@ -28,7 +28,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    max-width: 300px;
+    max-width: 420px;
 }
 
 .profile__description {
@@ -110,10 +110,13 @@
     .profile__name {
         font-size: 20px;
         margin: 0 0 6px;
+        max-width: 288px;
     }
 
     .profile__description {
         margin: 0 0 32px;
+        max-width: 288px;
+
     }
 
     .profile__column {
