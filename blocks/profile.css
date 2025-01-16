@@ -9,6 +9,8 @@
     height: 190px;
     width: 190px;
     margin-right: 20px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .profile__column {
@@ -88,8 +90,7 @@
 }
 
 .profile__add-btn:hover {
-    background-color: rgba(33, 33, 33, .8);
-
+opacity: 0.8;;
 }
 
 @media screen and (max-width:627px) {
