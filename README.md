@@ -32,4 +32,5 @@ The project is a responsive website featuring a modern layout designed to displa
 
 **Deployment**
 This webpage is deployed to GitHub pages
-[link:] (https://anyerm.github.io/se_project_spots/)
+[link:](https://anyerm.github.io/se_project_spots/)
+[YT video](https://youtu.be/02nfBqbZDRk)
