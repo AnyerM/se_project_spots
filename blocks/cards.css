@@ -1,29 +1,30 @@
 .cards {
-padding-top: 20px;
-padding-bottom: 40px;
-border-bottom: 1px rgba(33, 33, 33, .4) solid;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
 .cards__list {
-list-style-type: none;
-padding: 0;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, 413px);
-justify-content: center;
-gap: 40px 20px;
-color: #212121;
-font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 413px);
+  justify-content: center;
+  gap: 40px 20px;
+  color: #212121;
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
 }
 
 @media screen and (max-width: 627px) {
     .cards__list {
-grid-template-columns: repeat(auto-fit, 288px);
-gap: 20px 10px;
-}
+    grid-template-columns: repeat(auto-fit, 288px);
+    gap: 20px 10px;
+   }
 
-.cards {
-  padding-top: 15px;  
-  padding-bottom: 30px;
-}
+   .cards {
+     padding-top: 15px;  
+     padding-bottom: 30px;
+   }
+
 }
