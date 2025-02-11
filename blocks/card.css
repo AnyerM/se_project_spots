@@ -33,6 +33,10 @@
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: hidden;
 }
 
 .card__text {

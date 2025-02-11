@@ -14,9 +14,11 @@ const nameInput = editProfileModal.querySelector("#modal__input-name");
 const jobInput = editProfileModal.querySelector("#modal__input-description");
 const editFormElement = editProfileModal.querySelector(".modal__form");
 const profileNameElement = document.querySelector(".profile__name");
-const profileJobElement = document.querySelector(".profile__subtitle");
-const closeProfileModal = editProfileModal.querySelector(".modal__button-close");
+const profileDescriptionElement = document.querySelector(".profile__description");
 
+const closeProfileModal = editProfileModal.querySelector(".modal__button-close");
+const textContent = document.getElementById("textContent");
+const profileJobElement = document.getElementById("modal__input-description");
 
 const profilePostButton = document.querySelector(".profile__post-button");
 const newPostModal = document.querySelector("#new-post-modal");
@@ -36,13 +38,16 @@ function closeModal(modal) {
   modal.classList.remove("modal_opened");
 };
 
-// Edit Protile Button:
+
 
 profileEditButton.addEventListener("click", () => {
   openModal(editProfileModal);
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
 });
+
+
+  
 
 closeProfileModal.addEventListener("click", () => {
   closeModal(editProfileModal);
@@ -52,12 +57,12 @@ editFormElement.addEventListener("submit", (evt) => {
   editProfileModal.classList.remove("modal_opened");
   evt.preventDefault(); 
   profileNameElement.textContent = nameInput.value;
-  profileJobElement.textContent = jobInput.value;
+  profileDescriptionElement.textContent = jobInput.value;
   closeModal(editFormElement);
 });
 
 
-// New Post Button: 
+
 
 profilePostButton.addEventListener("click", () => {
   openModal(newPostModal);
@@ -76,8 +81,8 @@ postFormElement.addEventListener("submit", (evt) => {
   closeModal(postFormElement);
 });
 
+  
 
-// Render Cards:
 const cardTemplate = document.querySelector("#cardTemplate");
 const cardsList = document.querySelector(".cards__list");
 const previewModal = document.querySelector("#preview-modal");
