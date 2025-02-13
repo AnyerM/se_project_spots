@@ -72,7 +72,7 @@ editFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
   profileNameElement.textContent = nameInput.value;
   profileDescriptionElement.textContent = jobInput.value;
-  closeModal(editFormElement);
+  closeModal(editProfileModal);
 });
 
 profilePostButton.addEventListener("click", () => {
@@ -88,11 +88,10 @@ postFormElement.addEventListener("submit", (evt) => {
   const inputValues = { name: captionInput.value, link: linkInput.value };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  evt.target.reset();
 
   postFormElement.reset();
 
-  closeModal(postFormElement);
+  closeModal(newPostModal);
 });
 
 const cardTemplate = document.querySelector("#cardTemplate");
