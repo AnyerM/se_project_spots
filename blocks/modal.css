@@ -10,11 +10,13 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
+  opacity: 0;
   transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
 .modal_opened {
   visibility: visible;
+  opacity: 1;
 }
 
 .modal__container {
@@ -166,6 +168,7 @@
   .modal__form {
       margin: 0 12px;
       max-width: 300px;
+      min-width: auto;
   }
 
   .modal__label {
@@ -207,13 +210,11 @@
   }
 
   .modal__image {
-    width: 288px;
-    height: 192px;
+    max-width: fit-content;
+    width: 100%;
     top: 206px;
     left: 16px;
-    border-radius: 4px; 
-     
+    border-radius: 4px;
   }
-
 
 }
