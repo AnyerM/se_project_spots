@@ -33,7 +33,7 @@
     display: flex;
     justify-content: space-between;
     padding-top: 12px;
-    margin: 0;
+    margin: auto;
     text-overflow: ellipsis;
     white-space: normal;
     overflow: hidden;
@@ -90,5 +90,11 @@
 
     .card__text {
         font-size: 16px;
+        margin: auto;
     }
+
+    .card__like {
+        height: 18px;
+        background-size: contain;
+      }
 }
