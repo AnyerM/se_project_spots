@@ -109,6 +109,23 @@
   margin-bottom: 32px; 
 }
 
+.modal__input_type_error {
+  border-color: rgb(255, 0, 0, 0.6);
+  border-width: 1px;
+}
+
+.modal__error {
+  color: #f00;
+  line-height: 17.6px;
+  margin-top: 8px;
+  padding: 0;
+  visibility: hidden;
+}
+
+.modal__error_visible {
+  visibility: visible;
+}
+
 .modal__button-save {
   padding: 18px 58px;
   margin: 32px 0; 
@@ -185,6 +202,11 @@
 
   .modal__input::placeholder {
       opacity: 1;
+  }
+
+  .modal__error {
+    display: block;
+    color: red;
   }
 
   .modal__button-save {

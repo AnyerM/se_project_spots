@@ -60,7 +60,11 @@
                   name="Name"
                   class="modal__input"
                   placeholder="Type your name"
+                  minlength="2"
+                  maxlength="40"
+                  required
                 />
+                <span id="modal__input-name-error" class="modal__error"></span>
                 <label for="modal__input-description" class="modal__label">Description</label>
                 <input 
                   type="text" 
@@ -68,8 +72,12 @@
                   name="Description"
                   class="modal__input"
                   placeholder="Describe yourself"
+                  minlength="2"
+                  maxlength="200"
+                  required
                 />
-                <button class="modal__button-save">Save</button>
+                <span id ="modal__input-description-error" class="modal__error"></span>
+                <button class="modal__button-save" disabled>Save</button>
               </form>
             </div>
           </div>
@@ -90,7 +98,9 @@
                   name="Link"
                   class="modal__input"
                   placeholder="Paste a link to the picture"
+                  required
                 />
+                <span class="modal__input-link-error" class="modal__error"></span>
                 <label for="modal__input-caption" class="modal__label">Caption</label>
                 <input 
                   type="text" 
@@ -98,7 +108,11 @@
                   name="Caption"
                   class="modal__input"
                   placeholder="Type your caption"
+                  minlength="2"
+                  maxlength="30"
+                  required
                 />
+                <span id ="modal__input-caption-error" class="modal__error"></span>
                 <button class="modal__button-save">Save</button>
               </form>
             </div>
@@ -152,5 +166,6 @@
     </div>
   
     <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/validation.js"></script>
   </body>
   </html>

@@ -31,9 +31,7 @@ const nameInput = editProfileModal.querySelector("#modal__input-name");
 const jobInput = editProfileModal.querySelector("#modal__input-description");
 const editFormElement = editProfileModal.querySelector(".modal__form");
 const profileNameElement = document.querySelector(".profile__name");
-const profileDescriptionElement = document.querySelector(
-  ".profile__description"
-);
+const profileDescriptionElement = document.querySelector(".profile__description");
 
 const closeProfileModal = editProfileModal.querySelector(
   ".modal__button-close"
@@ -142,4 +140,25 @@ closePreviewModal.addEventListener("click", () => {
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
+});
+
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeModal(editProfileModal) || closeModal(newPostModal);
+  }
+});
+
+
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", (evt) => {
+    if (
+      evt.target.classList.contains("modal") ||
+      evt.target.classList.contains("modal__button-close")
+    ) {
+      closeModal(modal);
+    }
+  });
 });
