@@ -48,12 +48,23 @@ const cardImage = document.querySelector(".card__image");
 const cardText = document.querySelector(".card__text");
 const closePostModal = newPostModal.querySelector(".modal__button-close");
 
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const activePopup = document.querySelector(".modal_opened");
+    closeModal(activePopup);
+  }
+}
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
+
+  document.addEventListener("keyup", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+
+  document.removeEventListener("keyup", handleEscape);
 }
 
 profileEditButton.addEventListener("click", () => {

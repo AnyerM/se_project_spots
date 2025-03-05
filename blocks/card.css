@@ -86,8 +86,9 @@
 
     .card__text {
         font-size: 16px;
-    line-height: 16px;
-    font-weight: 500;
+        line-height: 16px;
+        font-weight: 500;
+        max-width: 235px;
     }
 
     .card__like {
