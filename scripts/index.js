@@ -31,12 +31,14 @@ const nameInput = editProfileModal.querySelector("#modal__input-name");
 const jobInput = editProfileModal.querySelector("#modal__input-description");
 const editFormElement = editProfileModal.querySelector(".modal__form");
 const profileNameElement = document.querySelector(".profile__name");
-const profileDescriptionElement = document.querySelector(".profile__description");
+const profileDescriptionElement = document.querySelector(
+  ".profile__description"
+);
 
 const closeProfileModal = editProfileModal.querySelector(
   ".modal__button-close"
 );
-const textContent = document.getElementById("textContent");
+
 const profileJobElement = document.querySelector(".profile__description");
 
 const profilePostButton = document.querySelector(".profile__post-button");
@@ -47,6 +49,7 @@ const postFormElement = newPostModal.querySelector(".modal__form");
 const cardImage = document.querySelector(".card__image");
 const cardText = document.querySelector(".card__text");
 const closePostModal = newPostModal.querySelector(".modal__button-close");
+const cardSubmitButton = newPostModal.querySelector(".modal__button-save");
 
 function handleEscape(evt) {
   if (evt.key === "Escape") {
@@ -101,6 +104,7 @@ postFormElement.addEventListener("submit", (evt) => {
   postFormElement.reset();
 
   closeModal(newPostModal);
+  disableButton(cardSubmitButton, settings);
 });
 
 const cardTemplate = document.querySelector("#cardTemplate");
@@ -153,13 +157,11 @@ initialCards.forEach((item) => {
   cardsList.prepend(cardElement);
 });
 
-
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     closeModal(editProfileModal) || closeModal(newPostModal);
   }
 });
-
 
 const modals = document.querySelectorAll(".modal");
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="!!!" />
     <meta name="author" content="Anyer Medina" />
@@ -15,47 +15,49 @@
       rel="stylesheet"
     />
     <title>Spots</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="page">
       <header class="header">
-         <img src="./images/Logo.svg" alt="Spot logo" class="header__logo">
+        <img src="./images/Logo.svg" alt="Spot logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
-        <img src="./images/Avatar.png" alt="Bessie Coleman" class="profile__avatar">
+          <img
+            src="./images/Avatar.png"
+            alt="Bessie Coleman"
+            class="profile__avatar"
+          />
           <div class="profile__column">
-           <h1 class="profile__name">Bessie Coleman</h1>
-             <p class="profile__description">Civil Aviator</p>
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-button">
               <img
-                 class="profile__edit-icon"
-                 src="./images/pencil.svg.svg"
-                 alt="Pen icon"
-               />Edit Profile
+                class="profile__edit-icon"
+                src="./images/pencil.svg.svg"
+                alt="Pen icon"
+              />Edit Profile
             </button>
-          </div> 
+          </div>
           <button type="button" class="profile__post-button">
-              <img 
-                src="./images/plus.svg" 
-                alt="add post button" 
-                class="profile__post-button-image"
-              />
-              <span class="profile__post-button-text">New Post</span>
+            <img
+              src="./images/plus.svg"
+              alt="add post button"
+              class="profile__post-button-image"
+            />
+            <span class="profile__post-button-text">New Post</span>
           </button>
-          
-          
+
           <div class="modal" id="edit-profile-modal">
             <div class="modal__container">
               <div class="modal__header">
                 <h2 class="modal__title">Edit Profile</h2>
-                <button class="modal__button-close"> 
-                </button>
+                <button class="modal__button-close"></button>
               </div>
               <form class="modal__form">
                 <label for="modal__input-name" class="modal__label">Name</label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   id="modal__input-name"
                   name="Name"
                   class="modal__input"
@@ -65,9 +67,11 @@
                   required
                 />
                 <span id="modal__input-name-error" class="modal__error"></span>
-                <label for="modal__input-description" class="modal__label">Description</label>
-                <input 
-                  type="text" 
+                <label for="modal__input-description" class="modal__label"
+                  >Description</label
+                >
+                <input
+                  type="text"
                   id="modal__input-description"
                   name="Description"
                   class="modal__input"
@@ -76,24 +80,27 @@
                   maxlength="200"
                   required
                 />
-                <span id ="modal__input-description-error" class="modal__error"></span>
+                <span
+                  id="modal__input-description-error"
+                  class="modal__error"
+                ></span>
                 <button class="modal__button-save" disabled>Save</button>
               </form>
             </div>
           </div>
-  
-          
+
           <div class="modal" id="new-post-modal">
             <div class="modal__container">
               <div class="modal__header">
                 <h2 class="modal__title">New Post</h2>
-                <button class="modal__button-close"> 
-                </button>
+                <button class="modal__button-close"></button>
               </div>
               <form class="modal__form">
-                <label for="modal__input-link" class="modal__label">Image link</label>
-                <input 
-                  type="url" 
+                <label for="modal__input-link" class="modal__label"
+                  >Image link</label
+                >
+                <input
+                  type="url"
                   id="modal__input-link"
                   name="Link"
                   class="modal__input"
@@ -101,9 +108,11 @@
                   required
                 />
                 <span id="modal__input-link-error" class="modal__error"></span>
-                <label for="modal__input-caption" class="modal__label">Caption</label>
-                <input 
-                  type="text" 
+                <label for="modal__input-caption" class="modal__label"
+                  >Caption</label
+                >
+                <input
+                  type="text"
                   id="modal__input-caption"
                   name="Caption"
                   class="modal__input"
@@ -112,60 +121,47 @@
                   maxlength="30"
                   required
                 />
-                <span id ="modal__input-caption-error" class="modal__error"></span>
+                <span
+                  id="modal__input-caption-error"
+                  class="modal__error"
+                ></span>
                 <button class="modal__button-save">Save</button>
               </form>
             </div>
           </div>
         </section>
-  
-        <section class="cards page__section">  
+
+        <section class="cards page__section">
           <ul class="cards__list">
-           
             <template id="cardTemplate">
               <li class="card">
-                <button 
-                  class="card__delete"
-                  type="button"
-                  >
-                </button>
-                <img 
-                  src=""
-                  alt="" 
-                  class="card__image"
-                />
+                <button class="card__delete" type="button"></button>
+                <img src="" alt="" class="card__image" />
                 <div class="card__caption">
                   <h2 class="card__text"></h2>
-                  <button 
-                    type="button" 
-                    class="card__like"
-                    >
-                  </button>
+                  <button type="button" class="card__like"></button>
                 </div>
               </li>
             </template>
           </ul>
         </section>
-  
-           
-          <div class="modal" id="preview-modal">
-            <div class="modal__content">
-              <button class="modal__button-close modal__button-close-preview"> 
-              </button>
-              <img src="#" alt="" class="modal__image"/>
-              <p class="modal__caption">Bridge with fog</p>
-            </div>
+
+        <div class="modal" id="preview-modal">
+          <div class="modal__content">
+            <button
+              class="modal__button-close modal__button-close-preview"
+            ></button>
+            <img src="#" alt="" class="modal__image" />
+            <p class="modal__caption">Bridge with fog</p>
           </div>
-  
+        </div>
       </main>
       <footer class="footer page__section">
-        <p class="footer__copyright">
-          2025 &copy; Anyer Medina
-        </p>
+        <p class="footer__copyright">2025 &copy; Anyer Medina</p>
       </footer>
     </div>
-  
+
     <script defer src="scripts/index.js"></script>
     <script defer src="scripts/validation.js"></script>
   </body>
-  </html>
+</html>
