@@ -74,8 +74,8 @@ profileEditButton.addEventListener("click", () => {
   openModal(editProfileModal);
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
-  nameInput.setCustomValidity("");
-  nameInput.classList.remove("error");
+  const inputList = Array.from(editFormElement.querySelectorAll(config.inputSelector));
+  resetValidation(editFormElement, inputList, config);
 });
 
 
@@ -89,6 +89,8 @@ editFormElement.addEventListener("submit", (evt) => {
 
 profilePostButton.addEventListener("click", () => {
   openModal(newPostModal);
+  const inputList = Array.from(postFormElement.querySelectorAll(config.inputSelector));
+  resetValidation(postFormElement, inputList, config);
 });
 
 
@@ -102,7 +104,7 @@ postFormElement.addEventListener("submit", (evt) => {
   postFormElement.reset();
 
   closeModal(newPostModal);
-  disableButton(cardSubmitButton, settings);
+  disableButton(cardSubmitButton, config);
 });
 
 const cardTemplate = document.querySelector("#cardTemplate");
