@@ -157,12 +157,6 @@ initialCards.forEach((item) => {
   cardsList.prepend(cardElement);
 });
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeModal(editProfileModal) || closeModal(newPostModal);
-  }
-});
-
 const modals = document.querySelectorAll(".modal");
 
 modals.forEach((modal) => {
