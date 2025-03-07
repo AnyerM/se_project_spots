@@ -17,13 +17,13 @@ const enableValidation = (config) => {
 const showInputError = (formElement, inputElement, errorMsg, config) => {
   const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  errorMsgEl.classList.add(settings.errorClass);
+  errorMsgEl.classList.add(config.errorClass);
 };
 
 const hideInputError = (formElement, inputElement, config) => {
   const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
   errorMsgEl.textContent = "";
-  errorMsgEl.classList.remove(settings.errorClass);
+  errorMsgEl.classList.remove(config.errorClass);
 };
 
 function checkInputValidity(formElement, inputElement) {

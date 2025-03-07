@@ -74,11 +74,11 @@ profileEditButton.addEventListener("click", () => {
   openModal(editProfileModal);
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileJobElement.textContent;
+  nameInput.setCustomValidity("");
+  nameInput.classList.remove("error");
 });
 
-closeProfileModal.addEventListener("click", () => {
-  closeModal(editProfileModal);
-});
+
 
 editFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
@@ -91,9 +91,7 @@ profilePostButton.addEventListener("click", () => {
   openModal(newPostModal);
 });
 
-closePostModal.addEventListener("click", () => {
-  closeModal(newPostModal);
-});
+
 
 postFormElement.addEventListener("submit", (evt) => {
   evt.preventDefault();
@@ -148,9 +146,7 @@ function getCardElement(data) {
   return cardElement;
 }
 
-closePreviewModal.addEventListener("click", () => {
-  closeModal(previewModal);
-});
+
 
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
