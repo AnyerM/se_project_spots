@@ -203,9 +203,8 @@
     padding: 16px 12px;
     line-height: 16px;
     font-size: 16px;
-    max-width: 276px;
     margin: 0;
-    width: 80vw;
+    width: 100%;
   }
 
   .modal__input::placeholder {
