@@ -1,0 +1,23 @@
+{
+  "name": "se_project_spots",
+  "version": "1.0.0",
+  "description": "Overview\r Intro\r Figma\r Images\r Intro",
+  "homepage": "https://github.com/AnyerM/se_project_spots#readme",
+  "bugs": {
+    "url": "https://github.com/AnyerM/se_project_spots/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnyerM/se_project_spots.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "jquery": "^4.0.0"
+  }
+}
