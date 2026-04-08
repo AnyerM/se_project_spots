@@ -7,10 +7,41 @@
     padding: 34px 0 20px;
 }
 
-.profile__image {
+.profile__avatar-button {
+    position: relative;
+    height: 190px;
+    width: 190px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.profile__avatar {
     height: 190px;
     width: 190px;
     border-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+.profile__avatar-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile__avatar-button:hover .profile__avatar-overlay {
+    opacity: 1;
 }
 
 .profile__column {
@@ -33,7 +64,7 @@
     -webkit-box-orient: vertical;
 }
 
-.profile__subtitle {
+.profile__description {
     color: #212121;
     opacity: .70;
     margin: 0;
@@ -105,10 +136,15 @@
         padding: 0;
     }
 
-    .profile__image {
+    .profile__avatar-button {
         height: 80px;
         width: 80px;
         margin: 20px 120px 12px;
+    }
+
+    .profile__avatar {
+        height: 80px;
+        width: 80px;
     }
 
     .profile__name {
@@ -119,10 +155,17 @@
         text-align: center;
     }
 
-    .profile__subtitle {
+    .profile__description {
         text-align: center;
         padding: 0;
         margin: 0;
+    }
+
+    .profile__avatar-overlay {
+        opacity: 1;
+        font-size: 0;
+        background: rgba(0, 0, 0, 0.5) url("../images/Group 11.png") center no-repeat;
+        background-size: 26px 26px;
     }
 
     .profile__edit-button {

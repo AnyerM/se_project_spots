@@ -23,11 +23,14 @@
       </header>
       <main class="content">
         <section class="profile page__section">
-          <img
-            src="./images/Avatar.png"
-            alt="Bessie Coleman"
-            class="profile__avatar"
-          />
+          <button type="button" class="profile__avatar-button">
+            <img
+              src="./images/Avatar.png"
+              alt="Bessie Coleman"
+              class="profile__avatar"
+            />
+            <span class="profile__avatar-overlay">Edit Avatar</span>
+          </button>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
@@ -129,6 +132,30 @@
               </form>
             </div>
           </div>
+
+          <div class="modal" id="edit-avatar-modal">
+            <div class="modal__container">
+              <div class="modal__header">
+                <h2 class="modal__title">Change Profile Picture</h2>
+                <button class="modal__button-close" type="button"></button>
+              </div>
+              <form class="modal__form">
+                <label for="modal__input-avatar" class="modal__label"
+                  >Profile picture</label
+                >
+                <input
+                  type="url"
+                  id="modal__input-avatar"
+                  name="Avatar"
+                  class="modal__input"
+                  placeholder="Paste the image link"
+                  required
+                />
+                <span id="modal__input-avatar-error" class="modal__error"></span>
+                <button class="modal__button-save" disabled>Save</button>
+              </form>
+            </div>
+          </div>
         </section>
 
         <section class="cards page__section">
@@ -150,9 +177,24 @@
           <div class="modal__content">
             <button
               class="modal__button-close modal__button-close-preview"
+              type="button"
             ></button>
             <img src="#" alt="" class="modal__image" />
             <p class="modal__caption">Bridge with fog</p>
+          </div>
+        </div>
+
+        <div class="modal" id="delete-card-modal">
+          <div class="modal__container modal__container_type_delete">
+            <div class="modal__header">
+              <h2 class="modal__title">Delete this card?</h2>
+              <button class="modal__button-close" type="button"></button>
+            </div>
+            <form class="modal__form modal__form_type_delete">
+              <button class="modal__button-save modal__button-save_type_delete">
+                Delete
+              </button>
+            </form>
           </div>
         </div>
       </main>
