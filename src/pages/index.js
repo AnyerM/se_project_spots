@@ -6,6 +6,10 @@ import {
   validateConfig,
 } from "../scripts/validation.js";
 import Api from "../utils/Api.js";
+import avatarImage from "../images/Avatar.png";
+import logoImage from "../images/Logo.svg";
+import pencilIcon from "../images/pencil.svg.svg";
+import plusIcon from "../images/plus.svg";
 
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
@@ -20,6 +24,11 @@ const profileDescriptionElement = document.querySelector(
   ".profile__description"
 );
 const profileAvatarElement = document.querySelector(".profile__avatar");
+const headerLogoElement = document.querySelector(".header__logo");
+const profileEditIconElement = document.querySelector(".profile__edit-icon");
+const profilePostButtonImageElement = document.querySelector(
+  ".profile__post-button-image"
+);
 
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileAvatarButton = document.querySelector(".profile__avatar-button");
@@ -58,6 +67,11 @@ const modals = document.querySelectorAll(".modal");
 let currentUserId = "";
 let selectedCard = null;
 let selectedCardId = "";
+
+headerLogoElement.src = logoImage;
+profileAvatarElement.src = avatarImage;
+profileEditIconElement.src = pencilIcon;
+profilePostButtonImageElement.src = plusIcon;
 
 function getCardOwnerId(cardData) {
   if (typeof cardData.owner === "string") {
