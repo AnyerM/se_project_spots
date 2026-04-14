@@ -14,7 +14,7 @@ import plusIcon from "../images/plus.svg";
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
   headers: {
-    authorization: "c56e30dc-2883-4270-a59e-b2f7bae969c6",
+    authorization: "1a3386cb-da31-4ae9-a535-6fc74f9ff463",
     "Content-Type": "application/json",
   },
 });
