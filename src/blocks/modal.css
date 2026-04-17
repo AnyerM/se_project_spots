@@ -28,7 +28,7 @@
 }
 
 .modal__container_type_delete {
-  max-width: 630px;
+  max-width: 730px;
 }
 
 .modal__header {
@@ -42,6 +42,10 @@
   line-height: 32px;
   font-weight: 500;
   margin: 0;
+}
+
+.modal__title_type_delete {
+  max-width: 330px;
 }
 
 .modal__button-close {
@@ -88,6 +92,7 @@
 
 .modal__form_type_delete {
   margin-top: 0;
+  padding-bottom: 36px;
 }
 
 .modal__label {
@@ -149,6 +154,8 @@
 
 .modal__button-save_type_delete {
   min-width: 156px;
+  margin-top: 32px;
+  margin-bottom: 0;
 }
 
 .modal__button-save:hover {

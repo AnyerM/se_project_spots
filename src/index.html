@@ -19,35 +19,23 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/Logo.svg" alt="Spot logo" class="header__logo" />
+        <img alt="Spot logo" class="header__logo" />
       </header>
       <main class="content">
         <section class="profile page__section">
           <button type="button" class="profile__avatar-button">
-            <img
-              src="./images/Avatar.png"
-              alt="Bessie Coleman"
-              class="profile__avatar"
-            />
+            <img alt="Bessie Coleman" class="profile__avatar" />
             <span class="profile__avatar-overlay">Edit Avatar</span>
           </button>
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
             <button type="button" class="profile__edit-button">
-              <img
-                class="profile__edit-icon"
-                src="./images/pencil.svg.svg"
-                alt="Pen icon"
-              />Edit Profile
+              <img class="profile__edit-icon" alt="Pen icon" />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__post-button">
-            <img
-              src="./images/plus.svg"
-              alt="add post button"
-              class="profile__post-button-image"
-            />
+            <img alt="add post button" class="profile__post-button-image" />
             <span class="profile__post-button-text">New Post</span>
           </button>
 
@@ -55,7 +43,7 @@
             <div class="modal__container">
               <div class="modal__header">
                 <h2 class="modal__title">Edit Profile</h2>
-                <button class="modal__button-close"></button>
+                <button class="modal__button-close" type="button"></button>
               </div>
               <form class="modal__form">
                 <label for="modal__input-name" class="modal__label">Name</label>
@@ -96,7 +84,7 @@
             <div class="modal__container">
               <div class="modal__header">
                 <h2 class="modal__title">New Post</h2>
-                <button class="modal__button-close"></button>
+                <button class="modal__button-close" type="button"></button>
               </div>
               <form class="modal__form">
                 <label for="modal__input-link" class="modal__label"
@@ -163,7 +151,7 @@
             <template id="cardTemplate">
               <li class="card">
                 <button class="card__delete" type="button"></button>
-                <img src="" alt="" class="card__image" />
+                <img alt="" class="card__image" />
                 <div class="card__caption">
                   <h2 class="card__text"></h2>
                   <button type="button" class="card__like"></button>
@@ -179,7 +167,7 @@
               class="modal__button-close modal__button-close-preview"
               type="button"
             ></button>
-            <img src="#" alt="" class="modal__image" />
+            <img alt="" class="modal__image" />
             <p class="modal__caption">Bridge with fog</p>
           </div>
         </div>
@@ -187,7 +175,9 @@
         <div class="modal" id="delete-card-modal">
           <div class="modal__container modal__container_type_delete">
             <div class="modal__header">
-              <h2 class="modal__title">Delete this card?</h2>
+              <h2 class="modal__title modal__title_type_delete">
+                Are you sure?
+              </h2>
               <button class="modal__button-close" type="button"></button>
             </div>
             <form class="modal__form modal__form_type_delete">

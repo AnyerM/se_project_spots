@@ -123,6 +123,20 @@ function renderInitialCards(cards) {
   });
 }
 
+function clearFormState(formElement) {
+  const inputList = formElement.querySelectorAll(validateConfig.inputSelector);
+  const errorList = formElement.querySelectorAll(".modal__error");
+
+  inputList.forEach((inputElement) => {
+    inputElement.classList.remove(validateConfig.inputErrorClass);
+  });
+
+  errorList.forEach((errorElement) => {
+    errorElement.textContent = "";
+    errorElement.classList.remove(validateConfig.errorClass);
+  });
+}
+
 function handleImageClick(data) {
   modalImage.src = data.link;
   modalImage.alt = data.name;
@@ -228,21 +242,16 @@ profileEditButton.addEventListener("click", () => {
 });
 
 profilePostButton.addEventListener("click", () => {
-  resetValidation(
-    postFormElement,
-    Array.from(postFormElement.querySelectorAll(validateConfig.inputSelector)),
-    validateConfig
-  );
+  postFormElement.reset();
+  clearFormState(postFormElement);
+  disableButton(cardSubmitButton, validateConfig);
   openModal(newPostModal);
 });
 
 profileAvatarButton.addEventListener("click", () => {
   avatarFormElement.reset();
-  resetValidation(
-    avatarFormElement,
-    Array.from(avatarFormElement.querySelectorAll(validateConfig.inputSelector)),
-    validateConfig
-  );
+  clearFormState(avatarFormElement);
+  disableButton(avatarSubmitButton, validateConfig);
   openModal(editAvatarModal);
 });
 
