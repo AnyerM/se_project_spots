@@ -164,8 +164,8 @@
     .profile__avatar-overlay {
         opacity: 1;
         font-size: 0;
-        background: rgba(0, 0, 0, 0.5) url("../images/Group 11.png") center no-repeat;
-        background-size: 26px 26px;
+        background: rgba(0, 0, 0, 0.5) url("../images/pencil.svg.svg") center no-repeat;
+        background-size: 18px 18px;
     }
 
     .profile__edit-button {

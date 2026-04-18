@@ -57,6 +57,9 @@ const cardSubmitButton = newPostModal.querySelector(".modal__button-save");
 const avatarSubmitButton = editAvatarModal.querySelector(".modal__button-save");
 const deleteSubmitButton =
   deleteCardModal.querySelector(".modal__button-save");
+const deleteCancelButton = deleteCardModal.querySelector(
+  "#delete-card-cancel-button"
+);
 
 const cardTemplate = document.querySelector("#cardTemplate");
 const cardsList = document.querySelector(".cards__list");
@@ -302,6 +305,9 @@ avatarFormElement.addEventListener("submit", (evt) => {
 });
 
 deleteFormElement.addEventListener("submit", handleDeleteSubmit);
+deleteCancelButton.addEventListener("click", () => {
+  closeModal(deleteCardModal);
+});
 
 modals.forEach((modal) => {
   modal.addEventListener("click", (evt) => {
