@@ -34,3 +34,8 @@ The project is a responsive website featuring a modern layout designed to displa
 This webpage is deployed to GitHub pages
 [link:](https://anyerm.github.io/se_project_spots/)
 [YT video](https://youtu.be/02nfBqbZDRk)
+
+
+## Project Pitch Video
+
+Check out [this project pitch for Spots Stage 2](https://drive.google.com/file/d/1_eLaniOEaoa1WGX0mkYMIz9sxzaRtcdm/view?usp=sharing), where I describe my project and some challenges I faced while building it.
